@@ -1,0 +1,7 @@
+{
+  "ClassName with brackets": {
+    "prefix": "cn",
+    "body": ["className={$1}"],
+    "description": "className com chaves"
+  }
+}
