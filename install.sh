@@ -2,12 +2,13 @@
 
 echo "🔧 Aguardando VS Code estar pronto..."
 
-# Espera até o comando 'code' estar disponível (timeout de 30s)
 for i in {1..30}; do
-  if command -v code &> /dev/null; then
+  if code --version &> /dev/null; then
     echo "✅ VS Code CLI disponível, instalando extensão..."
     code --install-extension esbenp.prettier-vscode
     break
+  else
+    echo "⏳ VS Code ainda não disponível... (tentativa $i)"
   fi
   sleep 1
 done
